@@ -1,0 +1,74 @@
+/* Flex both navs */
+.header .main-nav, .header .sub-nav {
+    display: flex;
+  }
+  
+  /* Main nav */
+  .header .main-nav {
+    background-color: #333;
+    justify-content: space-between;
+  }
+  
+  /* Full and short width nav lists */
+  .header .main-nav .full-width {
+    display: none;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .header .main-nav .full-width {
+      display: flex;
+    }
+  
+    .header .main-nav .short-width {
+      display: none;
+    }
+  }
+  
+  /* Nav list */
+  .header .nav-list {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .header .nav-list li a {
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .header .nav-list li:last-of-type a {
+    border-right: none;
+  }
+  
+  /* Sub nav */
+  .header .sub-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .sub-nav .search-form {
+    flex-grow: 1;
+    display: flex;
+  }
+  
+  .header .sub-nav input,
+  .header .sub-nav button {
+    padding: 10px;
+    border: none;
+  }
+  
+  .header .sub-nav input {
+    border-bottom: 2px solid #ccc;
+    flex-grow: 1;
+  }
+  
+  /* Company name and credit offer */
+  .header .company-name {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .header .credit-offer {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
